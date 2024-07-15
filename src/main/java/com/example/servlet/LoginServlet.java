@@ -15,9 +15,9 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String user = req.getParameter("user");
         if (user != null) {
-            resp.sendRedirect("/user/hello.jsp");
-        } else {
             resp.sendRedirect("/login.jsp");
+        } else {
+            resp.sendRedirect("/user/hello.jsp");
         }
     }
 
